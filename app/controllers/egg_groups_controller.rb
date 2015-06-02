@@ -1,0 +1,2 @@
+class EggGroupsController < ApplicationController
+end
