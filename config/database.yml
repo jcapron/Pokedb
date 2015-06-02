@@ -14,7 +14,7 @@ default: &default
 development:
   adapter: postgresql
   encoding: unicode
-  database: feedmenow_development
+  database: pokedb_development
   pool: 5
   password:
 
