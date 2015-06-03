@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150603113210) do
+ActiveRecord::Schema.define(version: 20150603155323) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,14 @@ ActiveRecord::Schema.define(version: 20150603113210) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "egg_groups_pokemons", force: :cascade do |t|
+    t.integer "egg_group_id"
+    t.integer "pokemon_id"
+  end
+
+  add_index "egg_groups_pokemons", ["egg_group_id"], name: "index_egg_groups_pokemons_on_egg_group_id", using: :btree
+  add_index "egg_groups_pokemons", ["pokemon_id"], name: "index_egg_groups_pokemons_on_pokemon_id", using: :btree
 
   create_table "pokemons", force: :cascade do |t|
     t.string   "name"
@@ -38,6 +46,14 @@ ActiveRecord::Schema.define(version: 20150603113210) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
+
+  create_table "pokemons_types", force: :cascade do |t|
+    t.integer "pokemon_id"
+    t.integer "type_id"
+  end
+
+  add_index "pokemons_types", ["pokemon_id"], name: "index_pokemons_types_on_pokemon_id", using: :btree
+  add_index "pokemons_types", ["type_id"], name: "index_pokemons_types_on_type_id", using: :btree
 
   create_table "types", force: :cascade do |t|
     t.string   "name"
