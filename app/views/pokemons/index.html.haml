@@ -12,3 +12,6 @@
   = "There are #{Type.count} Types."
 %p.text-center
   = "#{Type.first.inspect}"
+
+- Pokemon.all.each do |poke|
+  %img{src: poke.image_url, style: "width: 5%"}
