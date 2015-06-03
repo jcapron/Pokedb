@@ -1,5 +1,7 @@
 %h1.text-center
-  = "There are #{@total_pokemons} Pokémon."
+  = "There are #{Pokemon.count} Pokémon."
+%p.text-center
+  = "#{Pokemon.first.inspect}"
 
 %h1.text-center
   = "There are #{EggGroup.count} Egg Groups."

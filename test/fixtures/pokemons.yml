@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  image_url: MyString
+  national_id: 1
+  generation: 1
+  species: MyString
+  name_fr: MyString
+  height_in: 1.5
+  height_ft: MyString
+  height_cm: 1.5
+  weight_lb: 1.5
+  weight_kg: 1.5
+
+two:
+  name: MyString
+  image_url: MyString
+  national_id: 1
+  generation: 1
+  species: MyString
+  name_fr: MyString
+  height_in: 1.5
+  height_ft: MyString
+  height_cm: 1.5
+  weight_lb: 1.5
+  weight_kg: 1.5
