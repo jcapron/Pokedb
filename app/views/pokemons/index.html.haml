@@ -13,5 +13,6 @@
 %p.text-center
   = "#{Type.first.inspect}"
 
-- Pokemon.all.each do |poke|
-  = link_to image_tag(poke.image_url, style: "width: 5%"), pokemon_path(poke)
+.pokemon-index
+  - Pokemon.all.each do |poke|
+    = link_to image_tag("/pokemons/main_images/pokemon-#{poke.id}.png", style: "width: 3%"), pokemon_path(poke)
