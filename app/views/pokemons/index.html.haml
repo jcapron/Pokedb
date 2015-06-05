@@ -1,18 +1,20 @@
-%h1.text-center
-  = "There are #{Pokemon.count} Pokémon."
-%p.text-center
-  = "#{Pokemon.first.inspect}"
+%img.center-block{src: "/pokemons/pokemon_logo.png"}
 
-%h1.text-center
-  = "There are #{EggGroup.count} Egg Groups."
-%p.text-center
-  = "#{EggGroup.first.inspect}"
+/ %h1.text-center
+/   = "There are #{Pokemon.count} Pokémon."
+/ %p.text-center
+/   = "#{Pokemon.first.inspect}"
 
-%h1.text-center
-  = "There are #{Type.count} Types."
-%p.text-center
-  = "#{Type.first.inspect}"
+/ %h1.text-center
+/   = "There are #{EggGroup.count} Egg Groups."
+/ %p.text-center
+/   = "#{EggGroup.first.inspect}"
 
-.pokemon-index
+/ %h1.text-center
+/   = "There are #{Type.count} Types."
+/ %p.text-center
+/   = "#{Type.first.inspect}"
+
+.pokemon-index.center-block
   - Pokemon.all.each do |poke|
-    = link_to image_tag("/pokemons/main_images/pokemon-#{poke.id}.png", style: "width: 3%"), pokemon_path(poke)
+    = link_to image_tag("/pokemons/main_images/pokemon-#{poke.id}.png"), pokemon_path(poke)
